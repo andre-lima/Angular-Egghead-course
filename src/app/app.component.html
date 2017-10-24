@@ -4,9 +4,10 @@
     Welcome to {{title}}!
   </h1>
   <div>
-    <app-simple-form></app-simple-form>
-    {{mail.message}}
-    {{api}}
+    <ul>
+      <app-simple-form *ngFor="let msg of mail.messages" [message]="msg">
+      </app-simple-form>
+    </ul>
   </div>
 </div>
 

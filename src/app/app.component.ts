@@ -8,7 +8,7 @@ import { Component, Inject } from '@angular/core';
 export class AppComponent {
   title = 'my apppppppppppp';
 
-  constructor( @Inject('mail') private mail, @Inject('api') private api) {
+  constructor( @Inject('mail') private mail) {
 
   }
 }
