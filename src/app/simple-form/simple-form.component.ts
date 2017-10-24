@@ -5,7 +5,7 @@ import { Component, OnInit, Input } from '@angular/core';
   template: `
     <div>
       <p>{{message}}</p>
-      <input #myInput type="text">
+      <input #myInput type="text" [(ngModel)]="message">
       <button (click)="onClick($event, myInput.value)">click me</button>
     </div>
   `,
