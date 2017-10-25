@@ -5,7 +5,14 @@
   </h1>
   <div>
     <ul>
-      <app-simple-form *ngFor="let msg of mail.messages" [message]="msg">
+      <li *ngFor="let msg of mail.messages">{{msg.text}}</li>
+    </ul>
+    <ul>
+      <app-simple-form
+        *ngFor="let msg of mail.messages"
+        [message]="msg.text"
+        (update)="onUpdate(msg.id, $event.text)"
+        >
       </app-simple-form>
     </ul>
   </div>
