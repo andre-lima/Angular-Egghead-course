@@ -8,7 +8,14 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
       <button (click)="update.emit({text: message})">click me</button>
     </div>
   `,
-  styles: []
+  styles: [`
+  :host {
+    display: flex;
+  }
+  * {
+    font-family: monospace;
+  }
+  `]
 })
 export class SimpleFormComponent implements OnInit {
 
